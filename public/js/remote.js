@@ -17,6 +17,15 @@ var Remote = {
         },
         prev: function(){
             socket.emit('remoteEvent', {action:'prev'});
+        },
+        fullScreen: function(){
+            socket.emit('remoteEvent', {action:'fullScreen'});
+        },
+        esc: function(){
+            socket.emit('remoteEvent', {action:'esc'});
+        },
+        h: function(){
+            socket.emit('remoteEvent', {action:'h'});
         }
     }
 }

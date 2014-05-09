@@ -9,7 +9,16 @@
     socket.on('connect', function(){
         socket.on('actionEvent', function(data){
             //emit events with jquery
-            console.log(data)
+            var e = jQuery.Event("keydown");
+            
+            if (data.action == 'next') {
+                e.which = 77;
+            } else if (data.action == 'prev') {
+                e.which = 77;
+            } else if (data.action == 'prev') {
+                e.which = 77;
+            }
+            document.trigger(e);
         });
     });
     </script>
