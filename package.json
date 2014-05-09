@@ -1,0 +1,8 @@
+{ 
+   "name": "Google Slide Control",
+   "description": "Remote Google slide control",
+   "version": "1",
+   "dependencies": {
+      "express": "3.x"
+   }
+}

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>node</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://192.168.90.148:8881/socket.io/socket.io.js"></script>
+    <script src="http://192.168.90.148:8881/js/remote.js"></script>
+
+    <script>
+    var socket = io.connect('192.168.90.148:8881');
+    socket.on('connect', function(){
+        Remote.init();
+    });
+
+    </script>
+
+    <style type="text/css">
+    body{
+        background: #000;
+    }
+    #next{
+        width: 100px;
+        height: 100px;
+        float: left;
+        background: red;
+    }
+    #prev{
+        width: 100px;
+        height: 100px;
+        float: left;
+        background: blue;
+    }
+    </style>
+
+</head>
+<body>
+    <div>
+        <div id="next"></div>
+        <div id="prev"></div>
+    </div>
+</body>
+</html>
