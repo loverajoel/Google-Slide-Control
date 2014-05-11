@@ -12,7 +12,7 @@ app.get('/remote',function(req,res){
 	res.sendfile('./views/remote.html');
 })
 app.get('/presentation',function(req,res){
-	res.sendfile('./views/events.html')
+	res.sendfile('./views/events.html');
 })
 
 //init
