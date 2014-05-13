@@ -2,22 +2,14 @@
 <head>
 	<title>node</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="http://181.8.44.19:8881/socket.io/socket.io.js"></script>
-    <script src="http://181.8.44.19:8881/js/remote.js"></script>
+    <script src="http://192.168.0.13:8881/socket.io/socket.io.js"></script>
+    <script src="http://192.168.0.13:8881/js/remote.js"></script>
     <script>
-    var socket = io.connect('181.8.44.191:8881');
+    var socket = io.connect('192.168.0.13:8881');
     socket.on('connect', function(){
         socket.on('actionEvent', function(data){
-            //emit events with jquery
             var e = jQuery.Event("keydown");
-            
-            if (data.action == 'next') {
-                e.which = 39;
-            } else if (data.action == 'prev') {
-                e.which = 37;
-            } else if (data.action == 'fullScreen') {
-                e.which = 70;
-            }
+            e.which = data.code;
             document.trigger(e);
         });
     });
